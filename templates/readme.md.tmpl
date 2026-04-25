@@ -1,0 +1,53 @@
+# .ai — AI Assistant
+
+This directory contains the AI skill library and orchestrator for this project.
+It was set up by the [AI Skill Library](https://github.com/your-org/ai-skills-sample).
+
+## How It Works
+
+- **CLAUDE.md** (at project root) is the entry point for AI assistants
+- **Skills** provide context-specific guidance (deployment, database, brand, etc.)
+- **Orchestrator** enforces a structured workflow: discuss → plan → tasks → execute
+- Skills are concise summaries — detail files are loaded on demand to save tokens
+
+## Structure
+
+```
+.ai/
+├── manifest.yaml              # Tracks which skill versions are active (git tracked)
+├── lib/                       # Skill library (git clone, gitignored)
+│   ├── skills/
+│   │   ├── brand/skill.md
+│   │   ├── deployment/skill.md
+│   │   ├── database/skill.md
+│   │   └── general/skill.md
+│   ├── init.sh
+│   └── migrate.sh
+└── agent-execution/           # Ephemeral state (gitignored)
+    ├── orchestrator.md        # Workflow definition
+    ├── current-plan.md        # Active plan (created during work)
+    └── tasks.md               # Task progress (created during work)
+```
+
+## Orchestrator Workflow
+
+For non-trivial tasks, the AI follows this flow:
+
+1. **DISCUSS** — Understand requirements, ask questions, confirm scope
+2. **PLAN** — Write plan to `agent-execution/current-plan.md`, get user approval
+3. **TASKS** — Break into checkable tasks in `agent-execution/tasks.md`
+4. **EXECUTE** — Implement with progress tracking and resume capability
+5. **REVIEW** — Verify, test, and present summary
+
+If a conversation is interrupted, the AI resumes from the last unchecked task.
+
+## Updating Skills
+
+```bash
+cd .ai/lib && git pull origin main && cd ../..
+bash .ai/lib/migrate.sh
+```
+
+## Skill Versions
+
+Current versions are tracked in `manifest.yaml`. Run `migrate.sh` to check for updates.

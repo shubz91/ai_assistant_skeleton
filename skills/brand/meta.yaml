@@ -1,0 +1,18 @@
+# Keep this file simple — parsed by init.sh with grep/sed (no yq needed)
+name: brand
+version: "0.1.0"
+description: "Brand guidelines — colors, typography, logos, and UI component conventions"
+authors:
+  - "Brand Team"
+
+files:
+  - skill.md
+  - colors.md
+  - typography.md
+  - logo.md
+  - components.md
+  - voice-tone.md
+
+related_skills: []
+
+breaking_changes: []

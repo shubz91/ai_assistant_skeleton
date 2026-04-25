@@ -1,0 +1,18 @@
+# Keep this file simple — parsed by init.sh with grep/sed (no yq needed)
+name: general
+version: "0.1.0"
+description: "General development conventions — project planning, code review, testing, and git workflows"
+authors:
+  - "Platform Team"
+
+files:
+  - skill.md
+  - coding-guidelines.md
+  - project-planning.md
+  - code-review.md
+  - testing.md
+  - git-conventions.md
+
+related_skills: []
+
+breaking_changes: []

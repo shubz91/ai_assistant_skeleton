@@ -1,0 +1,19 @@
+# Keep this file simple — parsed by init.sh with grep/sed (no yq needed)
+name: database
+version: "0.1.0"
+description: "Database schema docs, credentials, naming conventions, and ingestion patterns"
+authors:
+  - "Platform Team"
+
+files:
+  - skill.md
+  - credentials.md
+  - architecture.md
+  - naming-conventions.md
+  - schemas/mysql.md
+  - schemas/clickhouse.md
+
+related_skills:
+  - deployment
+
+breaking_changes: []

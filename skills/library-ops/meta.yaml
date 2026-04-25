@@ -1,0 +1,15 @@
+# Keep this file simple — parsed by init.sh with grep/sed (no yq needed)
+name: library-ops
+version: "0.1.0"
+description: "Skill library maintenance — update skills, merge backups, run migrations"
+authors:
+  - "Platform Team"
+
+files:
+  - skill.md
+  - backup-merge.md
+  - update-skills.md
+
+related_skills: []
+
+breaking_changes: []

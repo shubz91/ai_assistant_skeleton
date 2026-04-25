@@ -1,0 +1,16 @@
+# Keep this file simple — parsed by init.sh with grep/sed (no yq needed)
+name: ai-gateway
+version: "0.1.0"
+description: "Claude Code API Gateway — sandboxed LLM/agent execution for production apps"
+authors:
+  - "Platform Team"
+
+files:
+  - skill.md
+  - api-reference.md
+  - workflow-patterns.md
+
+related_skills:
+  - deployment
+
+breaking_changes: []

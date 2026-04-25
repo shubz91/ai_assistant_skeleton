@@ -1,0 +1,14 @@
+# Keep this file simple — parsed by init.sh with grep/sed (no yq needed)
+name: deployment
+version: "0.1.0"
+description: "CI/CD, deployment, Docker, env vars, and platform conventions"
+authors:
+  - "Platform Team"
+
+files:
+  - skill.md
+  - base-path.md
+
+related_skills: []
+
+breaking_changes: []
