@@ -91,7 +91,7 @@ For each task:
    - Bump the skill version in `.ai/lib/skills/<skill>/meta.yaml`
    - Add a CHANGELOG entry in `.ai/lib/skills/<skill>/CHANGELOG.md`
    - Note the breaking change if applicable
-   - Commit and push these changes to main (see "Updating Skills from a Project" below)
+   - Push to main using the library-ops skill (see "Updating Skills from a Project" below)
 
 **Resume capability**: If the conversation is interrupted:
 - Read `.ai/agent-execution/current-plan.md` for the plan
@@ -126,18 +126,10 @@ For each task:
 
 ## Updating Skills from a Project
 
-When your work changes conventions that should apply to all projects:
+When your work changes conventions that should apply to all projects, use the **library-ops** skill:
 
 1. Make the change in `.ai/lib/skills/<skill>/`
 2. Bump version in `meta.yaml`
 3. Add CHANGELOG entry
 4. Add `breaking_changes` entry if it affects existing code
-5. Commit and push directly to main:
-   ```bash
-   cd .ai/lib
-   git add -A
-   git commit -m "feat(<skill>): <description>"
-   git push origin main
-   cd -
-   ```
-6. Other projects pull the update via `migrate.sh`
+5. Follow the push workflow in `.ai/lib/skills/library-ops/update-skills.md` → "Pushing Changes Back to the Skill Library"
