@@ -5,9 +5,9 @@ set -euo pipefail
 # AI Skill Library — One-Line Installer
 #
 # Usage:
-#   curl -sL https://raw.githubusercontent.com/your-org/ai-skills-sample/main/install.sh | bash
-#   curl -sL https://raw.githubusercontent.com/your-org/ai-skills-sample/main/install.sh | bash -s -- --inline
-#   curl -sL https://raw.githubusercontent.com/your-org/ai-skills-sample/main/install.sh | bash -s -- --repo <git-url>
+#   curl -sL https://raw.githubusercontent.com/shubz91/ai_assistant_skeleton/main/install.sh | bash
+#   curl -sL https://raw.githubusercontent.com/shubz91/ai_assistant_skeleton/main/install.sh | bash -s -- --inline
+#   curl -sL https://raw.githubusercontent.com/shubz91/ai_assistant_skeleton/main/install.sh | bash -s -- --repo <git-url>
 #
 # Idempotent: safe to run multiple times. On re-run it pulls latest and
 # re-runs init.sh (which always prompts for skill selection).
@@ -18,7 +18,7 @@ set -euo pipefail
 # ============================================================================
 
 # Default repo URL — update this to your organization's fork
-DEFAULT_REPO="https://github.com/your-org/ai-skills-sample.git"
+DEFAULT_REPO="git@github.com:shubz91/ai_assistant_skeleton.git"
 
 REPO_URL="$DEFAULT_REPO"
 EXTRA_ARGS=()

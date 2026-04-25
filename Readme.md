@@ -7,13 +7,13 @@ A shared, versioned collection of AI-assisted development guidance. Import into 
 From your project root:
 
 ```bash
-curl -sL https://raw.githubusercontent.com/your-org/ai-skills-sample/main/install.sh | bash
+curl -sL https://raw.githubusercontent.com/shubz91/ai_assistant_skeleton/main/install.sh | bash
 ```
 
 Or override the repo URL:
 
 ```bash
-curl -sL https://raw.githubusercontent.com/your-org/ai-skills-sample/main/install.sh | bash -s -- --repo <your-git-repo-url>
+curl -sL https://raw.githubusercontent.com/shubz91/ai_assistant_skeleton/main/install.sh | bash -s -- --repo <your-git-repo-url>
 ```
 
 This creates:
@@ -69,7 +69,7 @@ When project work changes conventions (e.g., new DB tables, deploy config schema
 Just re-run the installer — it pulls latest into `.ai/lib/` without touching your config:
 
 ```bash
-curl -sL https://raw.githubusercontent.com/your-org/ai-skills-sample/main/install.sh | bash
+curl -sL https://raw.githubusercontent.com/shubz91/ai_assistant_skeleton/main/install.sh | bash
 ```
 
 If there are breaking changes, ask your AI assistant: **"migrate skills to latest"**
@@ -123,7 +123,7 @@ breaking_changes:
 ## Repository Structure
 
 ```
-ai_skills_sample/
+ai_assistant_skeleton/
 ├── Readme.md              <- You are here
 ├── VERSION
 ├── CHANGELOG.md
